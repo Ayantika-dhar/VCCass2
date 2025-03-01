@@ -1,0 +1,8 @@
+autoscalingPolicy:
+  mode: ON
+  cpuUtilization:
+    utilizationTarget: 0.6  # Scale when CPU usage exceeds 60%
+  minNumReplicas: 1
+  maxNumReplicas: 5
+  coolDownPeriodSec: 60  # Wait 60 seconds before scaling again
+  scalingSchedules: []
