@@ -1,0 +1,21 @@
+instance:
+  name: vm-instance-template
+  machineType: e2-medium
+  zone: us-central1-c
+  disks:
+    - boot: true
+      autoDelete: true
+      initializeParams:
+        sourceImage: projects/ubuntu-os-cloud/global/images/ubuntu-2204-jammy-v20240312
+  networkInterfaces:
+    - network: global/networks/default
+      accessConfigs:
+        - name: External NAT
+          type: ONE_TO_ONE_NAT
+  metadata:
+    items:
+      - key: enable-oslogin
+        value: "TRUE"
+  tags:
+    items:
+      - allow-ssh
