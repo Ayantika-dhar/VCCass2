@@ -1,0 +1,144 @@
+{
+  "canIpForward": false,
+  "confidentialInstanceConfig": {
+    "enableConfidentialCompute": false
+  },
+  "cpuPlatform": "Unknown CPU Platform",
+  "creationTimestamp": "2025-02-23T01:11:05.476-08:00",
+  "deletionProtection": false,
+  "description": "",
+  "disks": [
+    {
+      "architecture": "X86_64",
+      "guestOsFeatures": [
+        {
+          "type": "UEFI_COMPATIBLE"
+        },
+        {
+          "type": "VIRTIO_SCSI_MULTIQUEUE"
+        },
+        {
+          "type": "GVNIC"
+        },
+        {
+          "type": "SEV_CAPABLE"
+        },
+        {
+          "type": "SEV_LIVE_MIGRATABLE_V2"
+        }
+      ],
+      "type": "PERSISTENT",
+      "licenses": [
+        "projects/debian-cloud/global/licenses/debian-12-bookworm"
+      ],
+      "deviceName": "instance1",
+      "autoDelete": true,
+      "source": "projects/vccass2/zones/us-central1-c/disks/my-instance-group-456k",
+      "index": 0,
+      "boot": true,
+      "kind": "compute#attachedDisk",
+      "mode": "READ_WRITE",
+      "interface": "SCSI",
+      "diskSizeGb": "10"
+    }
+  ],
+  "displayDevice": {
+    "enableDisplay": false
+  },
+  "fingerprint": "Wt1reEWGPUo=",
+  "id": "4980714039716305094",
+  "keyRevocationActionType": "NONE",
+  "kind": "compute#instance",
+  "labelFingerprint": "42WmSpB8rSM=",
+  "lastStartTimestamp": "2025-02-23T01:11:14.896-08:00",
+  "lastStopTimestamp": "2025-02-23T01:17:25.291-08:00",
+  "machineType": "projects/vccass2/zones/us-central1-c/machineTypes/e2-micro",
+  "metadata": {
+    "fingerprint": "fAtMNd7u4PE=",
+    "kind": "compute#metadata",
+    "items": [
+      {
+        "value": "projects/595639625659/regions/us-central1/instanceTemplates/instance1",
+        "key": "instance-template"
+      },
+      {
+        "value": "projects/595639625659/zones/us-central1-c/instanceGroupManagers/my-instance-group",
+        "key": "created-by"
+      }
+    ]
+  },
+  "name": "my-instance-group-456k",
+  "networkInterfaces": [
+    {
+      "stackType": "IPV4_ONLY",
+      "name": "nic0",
+      "network": "projects/vccass2/global/networks/default",
+      "accessConfigs": [
+        {
+          "name": "External NAT",
+          "type": "ONE_TO_ONE_NAT",
+          "kind": "compute#accessConfig",
+          "networkTier": "PREMIUM"
+        }
+      ],
+      "subnetwork": "projects/vccass2/regions/us-central1/subnetworks/default",
+      "networkIP": "10.128.0.4",
+      "fingerprint": "uISGAWPP3Zg=",
+      "kind": "compute#networkInterface"
+    }
+  ],
+  "reservationAffinity": {
+    "consumeReservationType": "ANY_RESERVATION"
+  },
+  "resourceStatus": {
+    "scheduling": {}
+  },
+  "satisfiesPzi": true,
+  "scheduling": {
+    "onHostMaintenance": "MIGRATE",
+    "provisioningModel": "STANDARD",
+    "automaticRestart": true,
+    "preemptible": false
+  },
+  "selfLink": "projects/vccass2/zones/us-central1-c/instances/my-instance-group-456k",
+  "serviceAccounts": [
+    {
+      "email": "595639625659-compute@developer.gserviceaccount.com",
+      "scopes": [
+        "https://www.googleapis.com/auth/devstorage.read_only",
+        "https://www.googleapis.com/auth/logging.write",
+        "https://www.googleapis.com/auth/monitoring.write",
+        "https://www.googleapis.com/auth/service.management.readonly",
+        "https://www.googleapis.com/auth/servicecontrol",
+        "https://www.googleapis.com/auth/trace.append"
+      ]
+    }
+  ],
+  "shieldedInstanceConfig": {
+    "enableSecureBoot": false,
+    "enableVtpm": true,
+    "enableIntegrityMonitoring": true
+  },
+  "shieldedInstanceIntegrityPolicy": {
+    "updateAutoLearnPolicy": true
+  },
+  "shieldedVmConfig": {
+    "enableSecureBoot": false,
+    "enableVtpm": true,
+    "enableIntegrityMonitoring": true
+  },
+  "shieldedVmIntegrityPolicy": {
+    "updateAutoLearnPolicy": true
+  },
+  "startRestricted": false,
+  "status": "TERMINATED",
+  "tags": {
+    "items": [
+      "http-server",
+      "https-server",
+      "lb-health-check"
+    ],
+    "fingerprint": "XTN9W2dqKHc="
+  },
+  "zone": "projects/vccass2/zones/us-central1-c"
+}
